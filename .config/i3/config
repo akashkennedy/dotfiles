@@ -37,24 +37,20 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-hide_edge_borders smart
 gaps outer 3
 gaps inner 8
 default_border pixel 3
 default_floating_border pixel 3
 
+
 #Start Picom Compositor
 exec --no-startup-id picom -f
 
 #Set Wallpaper using Feh
-exec_always --no-startup-id feh --bg-scale ~/.wallpapers/anime-background.jpg
-
+exec_always --no-startup-id feh --bg-scale ~/.wallpapers/Arch-Mocha-Crust.jpg
 #Start Polybar 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-#Set Brightness
-bindsym 122 brightnessctl set 10-
-bindsym f12 brightnessctl set +10
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -86,10 +82,10 @@ bindsym $mod+space exec --no-startup-id rofi -show drun
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -110,7 +106,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+Shift+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
