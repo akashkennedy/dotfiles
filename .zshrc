@@ -48,7 +48,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -116,9 +116,22 @@ alias ls="exa --icons --color=always --group-directories-first"
 #Using bat instead of Cat
 alias cat="bat"
 
+#Using cls as clear
+alias cls="clear"
+
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Following line was automatically added by arttime installer
+export MANPATH=/home/akashkennedy/.local/share/man:$MANPATH
+
+# Following line was automatically added by arttime installer
+export PATH=/home/akashkennedy/.local/bin:$PATH
+
+source /home/akashkennedy/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/akashkennedy/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
