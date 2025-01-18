@@ -79,7 +79,6 @@
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git  zsh-autosuggestions)
 
-#source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -89,11 +88,11 @@ plugins=(git  zsh-autosuggestions)
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='nvim'
+ else
+   export EDITOR='zed'
+ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -105,10 +104,8 @@ plugins=(git  zsh-autosuggestions)
 # - $ZSH_CUSTOM/aliases.zsh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+#<<<----- ALIASES ----->>>
 
 #Changing "ls" to "exa"
 alias ls="eza --icons --color=always --group-directories-first"
@@ -119,11 +116,10 @@ alias cat="bat"
 #Using cls as clear
 alias cls="clear"
 
+#Using starship as prompt
 eval "$(starship init zsh)"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+#Node Version Manager path Setup
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -133,4 +129,3 @@ export MANPATH=/home/akashkennedy/.local/share/man:$MANPATH
 
 # Following line was automatically added by arttime installer
 export PATH=/home/akashkennedy/.local/bin:$PATH
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
