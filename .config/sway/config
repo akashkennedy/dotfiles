@@ -16,6 +16,12 @@ client.unfocused		 #282828 #282828 #ddc7a1 #282828   #282828
 client.urgent			 #d8a657 #d8a657 #1d2021 #d8a657   #d8a657
 client.placeholder		 #7daea3 #7daea3 #1d2021 #7daea3   #7daea3
 
+# Set Brightness and Volume
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%  # Increase volume
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%  # Decrease volume 
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%  # Increase brightness
+bindsym XF86MonBrightnessDown exec brightnessctl set -10%  # Decrease brightness
+
 # <<< ----- CONFIG FOR SWAYFX ----- >>>
 blur enable
 blur_xray enable
