@@ -37,7 +37,7 @@ bar {
 }
 
 # Wallpapper
-output * background ~/.wallpapers/heart-catppuccin.jpg fill
+output * background ~/.wallpapers/catppuccin-mocha-cat-sunset.png fill
 
 # variables
 set $mod Mod4
