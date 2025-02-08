@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 
 notify-send "Getting list of available Wi-Fi networks..."
 # Get a list of available wifi connections and morph it into a nice-looking list
@@ -12,7 +12,7 @@ elif [[ "$connected" =~ "disabled" ]]; then
 fi
 
 # Use wofi to select wifi network
-chosen_network=$(echo -e "$toggle\n$wifi_list" | uniq -u | wofi -dmenu -i -selected-row 1 -p "Wi-Fi SSID: ")
+chosen_network=$(echo -e "$toggle\n$wifi_list" | uniq -u | wofi -dmenu -i -p Select 1  "Wi-Fi SSID: ")
 # Get name of connection
 read -r chosen_id <<<"${chosen_network:3}"
 
