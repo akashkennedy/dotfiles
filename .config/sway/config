@@ -37,7 +37,7 @@ bar {
 }
 
 # Wallpapper
-output * background ~/.wallpapers/catppuccin-mocha-cat-sunset.png fill
+output * background ~/.wallpapers/pitstop.png fill
 
 # variables
 set $mod Mod4
@@ -46,6 +46,7 @@ set $down j
 set $up k
 set $right l
 set $term kitty
+set $lock swaylock
 set $menu wofi --show drun
 
 # <<< ------ COMMON KEYBINDINGS ------ >>>
@@ -59,8 +60,14 @@ bindsym $mod+c kill
 bindsym $mod+Shift+r reload
 
 #Swaylock
-bindsym $mod+Shift+p exec swaylock
+bindsym $mod+Shift+p exec $lock 
+
+# Locks the Screen After 150 Seconds
+exec_always killall swayidle; swayidle -w timeout 150 "swaylock -f"
+
+#Exit Sway with Mod+Shift+e
 bindsym $mod+Shift+e exec $HOME/.config/sway/exit_sway.sh
+
 floating_modifier $mod normal
 
 

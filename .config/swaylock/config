@@ -1,13 +1,12 @@
-image=~/.wallpapers/arch-colorfull.jpg
+image=~/.wallpapers/pitstop.png
 font=0x Proto Nerd Font 
 font-size=20
-effect-blur=3x5
+effect-blur=8x5
 scaling=fill
 indicator-radius=100
 indicator-thickness=30
 bs-hl-color=ffa066
-caps-lock-bs-hl-color=ffa066
-caps-lock-key-hl-color=957fbb
+caps-lock-bs-hl-color=ffa066 caps-lock-key-hl-color=957fbb
 inside-color=1f1f28
 inside-clear-color=1f1f28
 inside-caps-lock-color=1f1f28
